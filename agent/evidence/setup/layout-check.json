@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "all module deliverable directories",
+    "matching agent directories",
+    "components only when requested",
+    "idempotent creation preserves user edits",
+    "path traversal rejected"
+  ]
+}

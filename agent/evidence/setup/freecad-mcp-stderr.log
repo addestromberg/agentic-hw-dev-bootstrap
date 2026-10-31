@@ -1,0 +1,29 @@
+2026-10-31 23:09:30,687 - FreeCADMCPserver - INFO - Only text feedback: True
+2026-10-31 23:09:30,687 - FreeCADMCPserver - INFO - Connecting to FreeCAD RPC server at: localhost
+2026-10-31 23:09:30,761 - FreeCADMCPserver - INFO - FreeCADMCP server starting up
+2026-10-31 23:09:30,763 - FreeCADMCPserver - WARNING - Could not connect to FreeCAD on startup: Failed to connect to FreeCAD ([Errno 1] Operation not permitted). Make sure the FreeCAD addon is running.
+2026-10-31 23:09:30,763 - FreeCADMCPserver - WARNING - Make sure the FreeCAD addon is running before using FreeCAD resources or tools
+2026-10-31 23:10:19,897 - FreeCADMCPserver - INFO - Only text feedback: True
+2026-10-31 23:10:19,898 - FreeCADMCPserver - INFO - Connecting to FreeCAD RPC server at: localhost
+2026-10-31 23:10:19,910 - FreeCADMCPserver - INFO - FreeCADMCP server starting up
+2026-10-31 23:10:19,913 - FreeCADMCPserver - WARNING - Could not connect to FreeCAD on startup: Failed to connect to FreeCAD ([Errno 111] Connection refused). Make sure the FreeCAD addon is running.
+2026-10-31 23:10:19,913 - FreeCADMCPserver - WARNING - Make sure the FreeCAD addon is running before using FreeCAD resources or tools
+2026-10-31 23:10:19,922 - FreeCADMCPserver - INFO - FreeCADMCP server shut down
+2026-10-31 23:12:04,298 - FreeCADMCPserver - INFO - Only text feedback: True
+2026-10-31 23:12:04,298 - FreeCADMCPserver - INFO - Connecting to FreeCAD RPC server at: localhost
+2026-10-31 23:12:04,309 - FreeCADMCPserver - INFO - FreeCADMCP server starting up
+2026-10-31 23:12:04,312 - FreeCADMCPserver - WARNING - Could not connect to FreeCAD on startup: Failed to connect to FreeCAD ([Errno 111] Connection refused). Make sure the FreeCAD addon is running.
+2026-10-31 23:12:04,312 - FreeCADMCPserver - WARNING - Make sure the FreeCAD addon is running before using FreeCAD resources or tools
+2026-10-31 23:12:04,693 - FreeCADMCPserver - INFO - FreeCADMCP server shut down
+2026-10-31 23:12:48,048 - FreeCADMCPserver - INFO - Only text feedback: True
+2026-10-31 23:12:48,048 - FreeCADMCPserver - INFO - Connecting to FreeCAD RPC server at: localhost
+2026-10-31 23:12:48,060 - FreeCADMCPserver - INFO - FreeCADMCP server starting up
+2026-10-31 23:12:48,062 - FreeCADMCPserver - WARNING - Could not connect to FreeCAD on startup: Failed to connect to FreeCAD ([Errno 111] Connection refused). Make sure the FreeCAD addon is running.
+2026-10-31 23:12:48,062 - FreeCADMCPserver - WARNING - Make sure the FreeCAD addon is running before using FreeCAD resources or tools
+2026-10-31 23:12:48,400 - FreeCADMCPserver - INFO - FreeCADMCP server shut down
+2026-10-31 23:14:31,359 - FreeCADMCPserver - INFO - Only text feedback: True
+2026-10-31 23:14:31,359 - FreeCADMCPserver - INFO - Connecting to FreeCAD RPC server at: localhost
+2026-10-31 23:14:31,372 - FreeCADMCPserver - INFO - FreeCADMCP server starting up
+2026-10-31 23:14:31,376 - FreeCADMCPserver - WARNING - Could not connect to FreeCAD on startup: Failed to connect to FreeCAD ([Errno 111] Connection refused). Make sure the FreeCAD addon is running.
+2026-10-31 23:14:31,376 - FreeCADMCPserver - WARNING - Make sure the FreeCAD addon is running before using FreeCAD resources or tools
+2026-10-31 23:14:31,742 - FreeCADMCPserver - INFO - FreeCADMCP server shut down

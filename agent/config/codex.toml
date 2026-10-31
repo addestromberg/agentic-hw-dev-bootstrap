@@ -1,0 +1,22 @@
+# Project-local MCP configuration. Discovery entry point: .codex/config.toml.
+# Backends are the pacman FreeCAD, KiCad and Blender applications.
+
+[mcp_servers.rsim_freecad]
+command = "/usr/bin/python3"
+args = ["/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py", "freecad"]
+startup_timeout_sec = 30
+tool_timeout_sec = 660
+enabled_tools = ["execute_code_headless"]
+
+[mcp_servers.rsim_kicad]
+command = "/usr/bin/python3"
+args = ["/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py", "kicad"]
+startup_timeout_sec = 30
+tool_timeout_sec = 300
+
+[mcp_servers.rsim_blender]
+command = "/usr/bin/python3"
+args = ["/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py", "blender"]
+startup_timeout_sec = 30
+tool_timeout_sec = 660
+enabled_tools = ["blender_python_exec", "blender_python_exec_async", "blender_job_status", "blender_job_cancel", "blender_job_list", "blender_render_still", "blender_render_animation"]

@@ -1,0 +1,1335 @@
+{
+  "server": {
+    "name": "Blender MCP Server",
+    "title": null,
+    "version": "1.30.0",
+    "websiteUrl": null,
+    "icons": null
+  },
+  "protocol_version": "2025-11-25",
+  "tools": [
+    {
+      "name": "blender_scene_get_info",
+      "title": null,
+      "description": "Get information about the current Blender scene including name, frame range, render engine, resolution, and object count.",
+      "inputSchema": {
+        "properties": {},
+        "title": "scene_get_infoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "scene_get_infoOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_scene_list_objects",
+      "title": null,
+      "description": "List all objects in the current Blender scene. Optionally filter by type (MESH, CAMERA, LIGHT, EMPTY, CURVE, etc.).",
+      "inputSchema": {
+        "properties": {
+          "type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Type"
+          }
+        },
+        "title": "scene_list_objectsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "scene_list_objectsOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_get_transform",
+      "title": null,
+      "description": "Get the position, rotation, and scale of a Blender object by name.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "object_get_transformArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_get_transformOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_get_hierarchy",
+      "title": null,
+      "description": "Get the parent/child hierarchy of objects. If name is provided, returns the subtree for that object. Otherwise returns the full scene hierarchy.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Name"
+          }
+        },
+        "title": "object_get_hierarchyArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_get_hierarchyOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_material_list",
+      "title": null,
+      "description": "List all materials in the Blender file.",
+      "inputSchema": {
+        "properties": {},
+        "title": "material_listArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "material_listOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_create",
+      "title": null,
+      "description": "Create a new mesh object in Blender. Supported types: cube, sphere, cylinder, plane, cone, torus.",
+      "inputSchema": {
+        "properties": {
+          "mesh_type": {
+            "default": "cube",
+            "title": "Mesh Type",
+            "type": "string"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Name"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Location"
+          },
+          "size": {
+            "default": 2.0,
+            "title": "Size",
+            "type": "number"
+          }
+        },
+        "title": "object_createArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_createOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_delete",
+      "title": null,
+      "description": "Delete an object from the Blender scene by name.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "object_deleteArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_deleteOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_translate",
+      "title": null,
+      "description": "Move an object. Provide either 'location' for absolute positioning or 'offset' for relative movement, not both.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Location"
+          },
+          "offset": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Offset"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "object_translateArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_translateOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_rotate",
+      "title": null,
+      "description": "Set the rotation of an object. Provide rotation as [x, y, z] angles. By default angles are in degrees.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "rotation": {
+            "items": {
+              "type": "number"
+            },
+            "title": "Rotation",
+            "type": "array"
+          },
+          "degrees": {
+            "default": true,
+            "title": "Degrees",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "rotation"
+        ],
+        "title": "object_rotateArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_rotateOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_scale",
+      "title": null,
+      "description": "Set the scale of an object. Provide scale as [x, y, z].",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "scale": {
+            "items": {
+              "type": "number"
+            },
+            "title": "Scale",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "scale"
+        ],
+        "title": "object_scaleArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_scaleOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_object_duplicate",
+      "title": null,
+      "description": "Duplicate an object in the Blender scene. Optionally provide a new name.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "new_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "New Name"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "title": "object_duplicateArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "object_duplicateOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_material_create",
+      "title": null,
+      "description": "Create a new material. Optionally set an initial base color as [r, g, b] or [r, g, b, a] with values 0-1.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "default": "Material",
+            "title": "Name",
+            "type": "string"
+          },
+          "color": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Color"
+          }
+        },
+        "title": "material_createArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "material_createOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_material_assign",
+      "title": null,
+      "description": "Assign an existing material to an object.",
+      "inputSchema": {
+        "properties": {
+          "object": {
+            "title": "Object",
+            "type": "string"
+          },
+          "material": {
+            "title": "Material",
+            "type": "string"
+          }
+        },
+        "required": [
+          "object",
+          "material"
+        ],
+        "title": "material_assignArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "material_assignOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_material_set_color",
+      "title": null,
+      "description": "Set the base color of a material. Color is [r, g, b] or [r, g, b, a] with values 0-1.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "color": {
+            "items": {
+              "type": "number"
+            },
+            "title": "Color",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "color"
+        ],
+        "title": "material_set_colorArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "material_set_colorOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_material_set_texture",
+      "title": null,
+      "description": "Set an image texture as the base color of a material. Provide the file path to the image.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "filepath": {
+            "title": "Filepath",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "filepath"
+        ],
+        "title": "material_set_textureArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "material_set_textureOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_render_still",
+      "title": null,
+      "description": "Render the current scene as a still image. Optionally set output path, resolution, and render engine (BLENDER_EEVEE, CYCLES, etc.). Use transport='bridge' for the live Blender add-on session, or transport='headless' with blend_file='/path/to/file.blend' to render in a separate background Blender process.",
+      "inputSchema": {
+        "properties": {
+          "output_path": {
+            "default": "//render.png",
+            "title": "Output Path",
+            "type": "string"
+          },
+          "resolution_x": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Resolution X"
+          },
+          "resolution_y": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Resolution Y"
+          },
+          "engine": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Engine"
+          },
+          "transport": {
+            "default": "bridge",
+            "enum": [
+              "bridge",
+              "headless"
+            ],
+            "title": "Transport",
+            "type": "string"
+          },
+          "blend_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Blend File"
+          },
+          "factory_startup": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Factory Startup"
+          }
+        },
+        "title": "render_stillArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "render_stillOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_render_animation",
+      "title": null,
+      "description": "Render an animation. Optionally set output path, frame range, and render engine. Use transport='bridge' for the live Blender add-on session, or transport='headless' with a blend_file to render in a separate background Blender process.",
+      "inputSchema": {
+        "properties": {
+          "output_path": {
+            "default": "//render_",
+            "title": "Output Path",
+            "type": "string"
+          },
+          "frame_start": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Frame Start"
+          },
+          "frame_end": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Frame End"
+          },
+          "engine": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Engine"
+          },
+          "transport": {
+            "default": "bridge",
+            "enum": [
+              "bridge",
+              "headless"
+            ],
+            "title": "Transport",
+            "type": "string"
+          },
+          "blend_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Blend File"
+          },
+          "factory_startup": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Factory Startup"
+          }
+        },
+        "title": "render_animationArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "render_animationOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_export_gltf",
+      "title": null,
+      "description": "Export the scene as glTF/GLB. Provide the output file path.",
+      "inputSchema": {
+        "properties": {
+          "filepath": {
+            "title": "Filepath",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filepath"
+        ],
+        "title": "export_gltfArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "export_gltfOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_export_obj",
+      "title": null,
+      "description": "Export the scene as OBJ. Provide the output file path.",
+      "inputSchema": {
+        "properties": {
+          "filepath": {
+            "title": "Filepath",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filepath"
+        ],
+        "title": "export_objArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "export_objOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_export_fbx",
+      "title": null,
+      "description": "Export the scene as FBX. Provide the output file path.",
+      "inputSchema": {
+        "properties": {
+          "filepath": {
+            "title": "Filepath",
+            "type": "string"
+          }
+        },
+        "required": [
+          "filepath"
+        ],
+        "title": "export_fbxArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "export_fbxOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_history_undo",
+      "title": null,
+      "description": "Undo the last operation in Blender.",
+      "inputSchema": {
+        "properties": {},
+        "title": "history_undoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "history_undoOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_history_redo",
+      "title": null,
+      "description": "Redo the last undone operation in Blender.",
+      "inputSchema": {
+        "properties": {},
+        "title": "history_redoArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "history_redoOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_python_exec",
+      "title": null,
+      "description": "Execute a Python script in Blender's context synchronously. Provide either 'code' (inline Python string) or 'script_path' (path to a .py file), not both. The script has access to 'bpy', 'mathutils', and an 'args' dict with your supplied arguments. Set '__result__' in the script to return a JSON-serializable value. Returns the result, captured stdout/stderr, and execution duration. Use transport='bridge' for the live Blender add-on session, or transport='headless' to run the script in a separate `blender -b` process. For long-running tasks like baking, use blender_python_exec_async.",
+      "inputSchema": {
+        "properties": {
+          "code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Code"
+          },
+          "script_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Script Path"
+          },
+          "args": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Args"
+          },
+          "timeout_seconds": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Timeout Seconds"
+          },
+          "transport": {
+            "default": "bridge",
+            "enum": [
+              "bridge",
+              "headless"
+            ],
+            "title": "Transport",
+            "type": "string"
+          },
+          "blend_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Blend File"
+          },
+          "factory_startup": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Factory Startup"
+          }
+        },
+        "title": "python_execArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "python_execOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_python_exec_async",
+      "title": null,
+      "description": "Start a long-running Python script in Blender asynchronously. Same parameters as blender_python_exec. Returns a job_id immediately. Use blender_job_status to poll for completion, and blender_job_cancel to abort. The script can check '__cancel_event__.is_set()' to detect cancellation. Ideal for fluid baking, rigid body simulation, or heavy scene generation. Note: bridge jobs run on Blender's main thread, so the Blender UI is busy while they run. Use transport='headless' to run the job in a separate background Blender process instead.",
+      "inputSchema": {
+        "properties": {
+          "code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Code"
+          },
+          "script_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Script Path"
+          },
+          "args": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Args"
+          },
+          "timeout_seconds": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Timeout Seconds"
+          },
+          "transport": {
+            "default": "bridge",
+            "enum": [
+              "bridge",
+              "headless"
+            ],
+            "title": "Transport",
+            "type": "string"
+          },
+          "blend_file": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Blend File"
+          },
+          "factory_startup": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Factory Startup"
+          }
+        },
+        "title": "python_exec_asyncArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "python_exec_asyncOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_job_status",
+      "title": null,
+      "description": "Get the status of an async Blender job. Returns job_id, status (queued/running/succeeded/failed/cancelled), timestamps, result, stdout, stderr, and error. Poll this after starting a job with blender_python_exec_async.",
+      "inputSchema": {
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id"
+        ],
+        "title": "job_statusArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "job_statusOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_job_cancel",
+      "title": null,
+      "description": "Cancel a running or queued async Blender job. The job's __cancel_event__ is set; scripts that check it will stop gracefully.",
+      "inputSchema": {
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id"
+        ],
+        "title": "job_cancelArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "job_cancelOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    },
+    {
+      "name": "blender_job_list",
+      "title": null,
+      "description": "List known async Blender jobs with their IDs, statuses, and creation timestamps.",
+      "inputSchema": {
+        "properties": {},
+        "title": "job_listArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "job_listOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": null,
+      "meta": null,
+      "execution": null
+    }
+  ]
+}

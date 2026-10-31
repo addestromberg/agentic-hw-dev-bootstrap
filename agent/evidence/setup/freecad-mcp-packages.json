@@ -1,0 +1,158 @@
+[
+  {
+    "name": "annotated-doc",
+    "version": "0.0.5"
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0"
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1"
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0"
+  },
+  {
+    "name": "certifi",
+    "version": "2026.10.23"
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1"
+  },
+  {
+    "name": "click",
+    "version": "8.5.0"
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.2"
+  },
+  {
+    "name": "freecad-mcp",
+    "version": "0.1.28"
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0"
+  },
+  {
+    "name": "httpcore2",
+    "version": "2.16.0"
+  },
+  {
+    "name": "httpx2",
+    "version": "2.16.0"
+  },
+  {
+    "name": "idna",
+    "version": "3.20"
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.26.0"
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1"
+  },
+  {
+    "name": "markdown-it-py",
+    "version": "4.2.0"
+  },
+  {
+    "name": "mcp",
+    "version": "2.3.0"
+  },
+  {
+    "name": "mcp-types",
+    "version": "2.3.0"
+  },
+  {
+    "name": "mdurl",
+    "version": "0.1.2"
+  },
+  {
+    "name": "opentelemetry-api",
+    "version": "1.45.2"
+  },
+  {
+    "name": "pycparser",
+    "version": "3.12"
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.2"
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.50.2"
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0"
+  },
+  {
+    "name": "PyJWT",
+    "version": "2.15.1"
+  },
+  {
+    "name": "python-dotenv",
+    "version": "1.2.4"
+  },
+  {
+    "name": "python-multipart",
+    "version": "0.0.33"
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0"
+  },
+  {
+    "name": "rich",
+    "version": "15.0.0"
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1"
+  },
+  {
+    "name": "shellingham",
+    "version": "1.5.4"
+  },
+  {
+    "name": "sse-starlette",
+    "version": "3.6.0"
+  },
+  {
+    "name": "starlette",
+    "version": "1.10.0"
+  },
+  {
+    "name": "truststore",
+    "version": "0.10.5"
+  },
+  {
+    "name": "typer",
+    "version": "0.27.3"
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4"
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0"
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.54.0"
+  },
+  {
+    "name": "validators",
+    "version": "0.36.0"
+  }
+]

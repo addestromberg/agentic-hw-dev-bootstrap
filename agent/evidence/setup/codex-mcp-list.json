@@ -1,0 +1,59 @@
+[
+  {
+    "name": "rsim_blender",
+    "enabled": true,
+    "disabled_reason": null,
+    "transport": {
+      "type": "stdio",
+      "command": "/usr/bin/python3",
+      "args": [
+        "/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py",
+        "blender"
+      ],
+      "env": null,
+      "env_vars": [],
+      "cwd": null
+    },
+    "startup_timeout_sec": 30.0,
+    "tool_timeout_sec": 660.0,
+    "auth_status": "unsupported"
+  },
+  {
+    "name": "rsim_freecad",
+    "enabled": true,
+    "disabled_reason": null,
+    "transport": {
+      "type": "stdio",
+      "command": "/usr/bin/python3",
+      "args": [
+        "/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py",
+        "freecad"
+      ],
+      "env": null,
+      "env_vars": [],
+      "cwd": null
+    },
+    "startup_timeout_sec": 30.0,
+    "tool_timeout_sec": 660.0,
+    "auth_status": "unsupported"
+  },
+  {
+    "name": "rsim_kicad",
+    "enabled": true,
+    "disabled_reason": null,
+    "transport": {
+      "type": "stdio",
+      "command": "/usr/bin/python3",
+      "args": [
+        "/home/adde/hw-dev/rsim/agent/scripts/run_mcp.py",
+        "kicad"
+      ],
+      "env": null,
+      "env_vars": [],
+      "cwd": null
+    },
+    "startup_timeout_sec": 30.0,
+    "tool_timeout_sec": 300.0,
+    "auth_status": "unsupported"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "ignored_examples": [
+    "agent/objects/envs/local/bin/python",
+    "agent/tools/cache.tar",
+    "user/modules/wheel/cad/wheel.FCStd1",
+    "user/modules/wheel/cad/wheel.FCBak",
+    "user/modules/wheel/cad/render.blend12",
+    "user/modules/wheel/electronics/kicad/wheel-backups/old.zip",
+    "user/modules/wheel/electronics/kicad/wheel.kicad_prl",
+    ".env.local",
+    ".aws/credentials",
+    ".pytest_cache/state"
+  ],
+  "kept_examples": [
+    "user/modules/wheel/cad/wheel.FCStd",
+    "user/modules/wheel/cad/render.blend",
+    "user/modules/wheel/electronics/kicad/wheel.kicad_pro",
+    "user/modules/wheel/electronics/bom/bom.csv",
+    "user/modules/wheel/renders/front.png",
+    "agent/evidence/wheel/run/result.json",
+    "agent/evidence/wheel/run/solver.log",
+    "agent/config/mcp-sources.json",
+    ".env.example"
+  ]
+}

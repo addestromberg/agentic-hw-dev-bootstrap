@@ -1,0 +1,14 @@
+{
+  "freecad": {
+    "repository": "https://github.com/neka-nat/freecad-mcp.git",
+    "commit": "8babe9927ce8e6e8fe7dd6ae2ffa2c93776e845a"
+  },
+  "kicad": {
+    "repository": "https://github.com/Seeed-Studio/kicad-mcp-server.git",
+    "commit": "0b445be8668c00b0d71315e74fa2f180bca686c2"
+  },
+  "blender": {
+    "repository": "https://github.com/djeada/blender-mcp-server.git",
+    "commit": "428f60cdb819c55c69d67eef681f0318e464e0e9"
+  }
+}

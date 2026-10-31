@@ -1,0 +1,6 @@
+interface:
+  display_name: "Mechanical Engineering"
+  short_description: "Parametric CAD, mechanical analysis and manufacturing"
+  default_prompt: "Use $mechanical-engineering to develop the native CAD design and verify fit, loads, tolerances and fabrication constraints."
+policy:
+  allow_implicit_invocation: true

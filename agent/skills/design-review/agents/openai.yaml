@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design Review"
+  short_description: "Independent evidence-based engineering review"
+  default_prompt: "Use $design-review to inspect this engineering design, report actionable findings and assess the requested review gate."
+policy:
+  allow_implicit_invocation: true

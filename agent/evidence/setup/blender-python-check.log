@@ -1,0 +1,39 @@
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-26 14:00:03)
+[ALSOFT] (EE) Failed to connect PipeWire event context (errno: 112)
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/bpy/utils/__init__.py", line 142, in _test_import
+    mod = __import__(module_name)
+  File "/usr/share/blender/5.2/scripts/startup/bl_operators/__init__.py", line 55, in <module>
+    __import__(name=__name__, fromlist=_modules)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/share/blender/5.2/scripts/startup/bl_operators/uvcalc_transform.py", line 12, in <module>
+    import math
+ModuleNotFoundError: No module named 'math'
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 544, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 890, in register
+    from . import (
+    ...<3 lines>...
+    )
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/bl_extension_utils.py", line 62, in <module>
+    import subprocess
+  File "/home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/lib/python3.14/subprocess.py", line 106, in <module>
+    from _posixsubprocess import fork_exec as _fork_exec
+ModuleNotFoundError: No module named '_posixsubprocess'
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 544, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/cycles/__init__.py", line 142, in register
+    from . import properties
+  File "/usr/share/blender/5.2/scripts/addons_core/cycles/properties.py", line 23, in <module>
+    from math import pi
+ModuleNotFoundError: No module named 'math'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/cycles/__init__.py
+PYTHON_CHECK /home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu /home/adde/.local/bin/python3.14 ['/usr/share/blender/5.2/scripts/startup', '/usr/share/blender/5.2/scripts/modules', '/home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/lib/python314.zip', '/home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/lib/python3.14', '/home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/lib/python3.14/lib-dynload', '/home/adde/.local/share/uv/python/cpython-3.14-linux-x86_64-gnu/lib/python3.14/site-packages', '/usr/share/blender/5.2/scripts/freestyle/modules', '/home/adde/.config/blender/5.2/scripts/addons/modules', '/usr/share/blender/5.2/scripts/addons_core']
+Error: dropbox with unknown operator: WM_OT_drop_blend_file
+
+Blender quit

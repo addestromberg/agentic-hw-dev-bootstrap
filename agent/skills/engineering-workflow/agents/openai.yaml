@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Workflow"
+  short_description: "Coordinate hardware designs, evidence and review gates"
+  default_prompt: "Use $engineering-workflow to plan and execute this hardware task with clear requirements, evidence and release blockers."
+policy:
+  allow_implicit_invocation: true

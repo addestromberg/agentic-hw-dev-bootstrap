@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "utc": "20261031T221429800397Z",
+  "packages": [
+    "freecad 1.1.4-3",
+    "kicad 10.0.7-2",
+    "blender 17:5.2.3-5",
+    "kicad-library 10.0.7-1"
+  ],
+  "checks": [
+    {
+      "server": "freecad",
+      "tool": "execute_code_headless",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-freecad-execute_code_headless.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "create_kicad_project",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-create_kicad_project.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "setup_pcb_layout",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-setup_pcb_layout.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "get_pcb_statistics",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-get_pcb_statistics.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "run_drc",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-run_drc.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "export_gerber",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-export_gerber.json"
+    },
+    {
+      "server": "blender",
+      "tool": "blender_python_exec",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-blender-blender_python_exec.json"
+    }
+  ],
+  "artifacts": "agent/objects/toolchain-check/20261031T221429800397Z",
+  "scope": "Software integration smoke checks only; no RSIM hardware design or physical validation."
+}

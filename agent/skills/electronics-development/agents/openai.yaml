@@ -1,0 +1,6 @@
+interface:
+  display_name: "Electronics Development"
+  short_description: "Daily engineering checks and board release gates"
+  default_prompt: "Use $electronics-development to develop this board and report the checks and release blockers."
+policy:
+  allow_implicit_invocation: true

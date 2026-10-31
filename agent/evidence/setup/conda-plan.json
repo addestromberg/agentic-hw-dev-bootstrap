@@ -1,0 +1,21 @@
+{
+    "log_history": [
+        {
+            "level": "error",
+            "location": "/home/conda/feedstock_root/build_artifacts/micromamba_1793024567739/work/mamba/libmamba/src/api/utils.cpp:721:13 bool mamba::handle_unsolvable_with_retry(solver::libsolv::Solver::Outcome&, const Palette&, bool, bool, bool, std::size_t&, solver::libsolv::Database&, const std::function<void()>&, const std::function<void()>&)",
+            "message": "Could not solve for environment specs\n    The following packages are incompatible\n    ├─ blender =* * does not exist (perhaps a typo or a missing channel);\n    └─ kicad =* * does not exist (perhaps a typo or a missing channel).",
+            "source": "libmamba"
+        },
+        {
+            "level": "critical",
+            "location": "/home/conda/feedstock_root/build_artifacts/micromamba_1793024567739/work/mamba/micromamba/src/main.cpp:349:9 int main(int, char**)",
+            "message": "Could not solve for environment specs",
+            "source": "libmamba"
+        }
+    ],
+    "solver_problems": [
+        "unsupported request",
+        "unsupported request"
+    ],
+    "success": false
+}

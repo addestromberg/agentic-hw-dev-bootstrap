@@ -1,0 +1,131 @@
+{
+  "repository": "addestromberg/skywatch",
+  "commit": "76e3701c226106dc3da5e415741ea417a42b4e1d",
+  "files": [
+    {
+      "source": "SKILLS/design-review/SKILL.md",
+      "dest": "agent/skills/design-review/SKILL.md",
+      "sha": "9552bbbc4bc1309bba08e6a16b95e2df6cca97be"
+    },
+    {
+      "source": "SKILLS/design-review/agents/openai.yaml",
+      "dest": "agent/skills/design-review/agents/openai.yaml",
+      "sha": "9cc07ccb9079afd0285e00d56825304e9eb3295d"
+    },
+    {
+      "source": "SKILLS/design-review/references/review-report.md",
+      "dest": "agent/skills/design-review/references/review-report.md",
+      "sha": "8c3e1ac9537142eb85fa71829a0b05b900807f6f"
+    },
+    {
+      "source": "SKILLS/electronics-development/SKILL.md",
+      "dest": "agent/skills/electronics-development/SKILL.md",
+      "sha": "79cc61ceacd9814adbe5a60bed804f11465aca65"
+    },
+    {
+      "source": "SKILLS/electronics-development/agents/openai.yaml",
+      "dest": "agent/skills/electronics-development/agents/openai.yaml",
+      "sha": "85e492864d70426aebe73654addbbf4321a312af"
+    },
+    {
+      "source": "SKILLS/electronics-development/references/bring-up.md",
+      "dest": "agent/skills/electronics-development/references/bring-up.md",
+      "sha": "d674dba9182b983aa766a76a2fb62ee5477283a7"
+    },
+    {
+      "source": "SKILLS/electronics-development/references/engineering-checks.md",
+      "dest": "agent/skills/electronics-development/references/engineering-checks.md",
+      "sha": "229d485d1ff7d4fcf2a989881e574a05bacb4470"
+    },
+    {
+      "source": "SKILLS/electronics-development/references/release-gates.md",
+      "dest": "agent/skills/electronics-development/references/release-gates.md",
+      "sha": "90503192eeb9c7912cc7d00ca4c6ef2c8f8263dd"
+    },
+    {
+      "source": "SKILLS/electronics-development/scripts/check_release.py",
+      "dest": "agent/skills/electronics-development/scripts/check_release.py",
+      "sha": "92b8fe021baffcc5c47da315aef1ef5f42638b68"
+    },
+    {
+      "source": "SKILLS/electronics-development/scripts/install_personal.py",
+      "dest": "agent/skills/electronics-development/scripts/install_personal.py",
+      "sha": "6ea41baf23db32669b2854b48d39545629381132"
+    },
+    {
+      "source": "SKILLS/electronics-development/scripts/test_check_release.py",
+      "dest": "agent/skills/electronics-development/scripts/test_check_release.py",
+      "sha": "3fdab9728872845d7109aa8d2952b3584aeb5f6c"
+    },
+    {
+      "source": "SKILLS/electronics-development/scripts/test_install_personal.py",
+      "dest": "agent/skills/electronics-development/scripts/test_install_personal.py",
+      "sha": "69e04593af81dd8368aa9c9c42aa1d4498fb119f"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/SKILL.md",
+      "dest": "agent/skills/engineering-workflow/SKILL.md",
+      "sha": "36630c4a9801ff836b017f91edeebb3d2af13a82"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/agents/openai.yaml",
+      "dest": "agent/skills/engineering-workflow/agents/openai.yaml",
+      "sha": "02063cda3218946310de5315017640306f668c6d"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/references/gate-engine.md",
+      "dest": "agent/skills/engineering-workflow/references/gate-engine.md",
+      "sha": "cd282a45c0c32291411fdc8ca1221fad20d5b91e"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/references/gates-and-contract.md",
+      "dest": "agent/skills/engineering-workflow/references/gates-and-contract.md",
+      "sha": "86af182e40da8e7fd900ff660cf14f500a65bc54"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/scripts/check_gates.py",
+      "dest": "agent/skills/engineering-workflow/scripts/check_gates.py",
+      "sha": "aa287288c064d127d91fa3cb7799da6ff1c17de7"
+    },
+    {
+      "source": "SKILLS/engineering-workflow/scripts/test_check_gates.py",
+      "dest": "agent/skills/engineering-workflow/scripts/test_check_gates.py",
+      "sha": "42bfc0d25e01569224b94817aa94089bcc3b780c"
+    },
+    {
+      "source": "SKILLS/mechanical-engineering/SKILL.md",
+      "dest": "agent/skills/mechanical-engineering/SKILL.md",
+      "sha": "015aee9439fc496b31eabb6fb0b9fe53463c67d7"
+    },
+    {
+      "source": "SKILLS/mechanical-engineering/agents/openai.yaml",
+      "dest": "agent/skills/mechanical-engineering/agents/openai.yaml",
+      "sha": "f45ef8199a3dec446a878876774cfc44f64d3ec6"
+    },
+    {
+      "source": "SKILLS/mechanical-engineering/references/design-checklist.md",
+      "dest": "agent/skills/mechanical-engineering/references/design-checklist.md",
+      "sha": "0bbc48a44546766755017a77ad1af05c7ba4effc"
+    },
+    {
+      "source": "SKILLS/mechanical-engineering/scripts/inspect_freecad.py",
+      "dest": "agent/skills/mechanical-engineering/scripts/inspect_freecad.py",
+      "sha": "0d35b291268187ea816d9fb69925735d39105bb0"
+    },
+    {
+      "source": "SKILLS/simulation-engineering/SKILL.md",
+      "dest": "agent/skills/simulation-engineering/SKILL.md",
+      "sha": "a1f37ad08ddb1fb2a4962a08651e2395ff23407c"
+    },
+    {
+      "source": "SKILLS/simulation-engineering/agents/openai.yaml",
+      "dest": "agent/skills/simulation-engineering/agents/openai.yaml",
+      "sha": "9a180e34154b5a39e5f1db38997fbf35b070326f"
+    },
+    {
+      "source": "SKILLS/simulation-engineering/references/reproducible-simulation.md",
+      "dest": "agent/skills/simulation-engineering/references/reproducible-simulation.md",
+      "sha": "63e7bb51bd4d41a3c8b85cb8ef678a55164cf0b3"
+    }
+  ]
+}

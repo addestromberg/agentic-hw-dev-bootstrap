@@ -1,0 +1,87 @@
+PASS freecad/execute_code_headless
+PASS kicad/create_kicad_project
+Traceback (most recent call last):
+  File "/home/adde/hw-dev/rsim/agent/scripts/verify_toolchain.py", line 111, in <module>
+    main()
+    ~~~~^^
+  File "/home/adde/hw-dev/rsim/agent/scripts/verify_toolchain.py", line 57, in main
+    assert board.is_file() and schematic.is_file()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+PASS freecad/execute_code_headless
+PASS kicad/create_kicad_project
+PASS kicad/setup_pcb_layout
+PASS kicad/get_pcb_statistics
+PASS kicad/run_drc
+PASS kicad/export_gerber
+PASS blender/blender_python_exec
+Traceback (most recent call last):
+  File "/home/adde/hw-dev/rsim/agent/scripts/verify_toolchain.py", line 116, in <module>
+    main()
+    ~~~~^^
+  File "/home/adde/hw-dev/rsim/agent/scripts/verify_toolchain.py", line 103, in main
+    assert render.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n"
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/adde/hw-dev/rsim/agent/objects/toolchain-check/20261031T221246517140Z/blender.png'
+PASS freecad/execute_code_headless
+PASS kicad/create_kicad_project
+PASS kicad/setup_pcb_layout
+PASS kicad/get_pcb_statistics
+PASS kicad/run_drc
+PASS kicad/export_gerber
+PASS blender/blender_python_exec
+{
+  "status": "PASS",
+  "utc": "20261031T221429800397Z",
+  "packages": [
+    "freecad 1.1.4-3",
+    "kicad 10.0.7-2",
+    "blender 17:5.2.3-5",
+    "kicad-library 10.0.7-1"
+  ],
+  "checks": [
+    {
+      "server": "freecad",
+      "tool": "execute_code_headless",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-freecad-execute_code_headless.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "create_kicad_project",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-create_kicad_project.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "setup_pcb_layout",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-setup_pcb_layout.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "get_pcb_statistics",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-get_pcb_statistics.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "run_drc",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-run_drc.json"
+    },
+    {
+      "server": "kicad",
+      "tool": "export_gerber",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-kicad-export_gerber.json"
+    },
+    {
+      "server": "blender",
+      "tool": "blender_python_exec",
+      "evidence": "agent/evidence/setup/20261031T221429800397Z-blender-blender_python_exec.json"
+    }
+  ],
+  "artifacts": "agent/objects/toolchain-check/20261031T221429800397Z",
+  "scope": "Software integration smoke checks only; no RSIM hardware design or physical validation."
+}

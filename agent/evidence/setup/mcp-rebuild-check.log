@@ -1,0 +1,24 @@
+Using Python 3.14.8 environment at: agent/objects/envs/freecad-mcp
+Resolved 39 packages in 951ms
+   Building freecad-mcp @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/freecad
+      Built freecad-mcp @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/freecad
+Prepared 1 package in 178ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 4ms
+ ~ freecad-mcp==0.1.28 (from file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/freecad)
+Using Python 3.14.8 environment at: agent/objects/envs/kicad-mcp
+Resolved 76 packages in 215ms
+   Building kicad-mcp-server @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/kicad
+      Built kicad-mcp-server @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/kicad
+Prepared 1 package in 424ms
+Uninstalled 1 package in 4ms
+Installed 1 package in 14ms
+ ~ kicad-mcp-server==0.1.0 (from file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/kicad)
+Using Python 3.14.8 environment at: agent/objects/envs/blender-mcp
+Resolved 30 packages in 14ms
+   Building blender-mcp-server @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/blender
+      Built blender-mcp-server @ file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/blender
+Prepared 1 package in 433ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 2ms
+ ~ blender-mcp-server==0.2.0 (from file:///home/adde/hw-dev/rsim/agent/objects/mcp-sources/blender)

@@ -1,0 +1,53 @@
+# Downloaded tools, Python environments, source checkouts, caches and scratch output
+/agent/objects/
+/agent/tools/
+
+# Python/tool caches and local environments
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+
+# FreeCAD and Blender automatic backups
+*.FCStd[0-9]*
+*.FCBak
+*.blend[0-9]*
+
+# KiCad local state, locks, autosaves and backups
+*.kicad_prl
+*.lck
+**/*-backups/
+*.sch-bak
+*.pcb-bak
+_autosave-*
+_autosave_*
+\#auto_saved_files\#
+\#auto_saved_files\#/
+
+# Editor/OS scratch and generic backups
+*.bak
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local credentials; share only intentionally sanitized example files
+.env
+.env.*
+!.env.example
+!.env.template
+.aws/
+
+# Do not blanket-ignore logs, CSV, JSON, PDFs, images, CAD or simulation files:
+# useful deliverables and selected evidence must remain eligible for versioning.
