@@ -1,6 +1,6 @@
-# RSIM
+# AGENTIC HARDWARE DESIGN BOOTSTRAP
 
-Racing simulator cockpit hardware project. The workspace is being prepared;
+Bootstrap your hardware project. The workspace is being prepared;
 hardware requirements and designs have not yet been established.
 
 - [Project rules and directory structure](user/docs/project-rules.md)
