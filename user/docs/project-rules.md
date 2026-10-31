@@ -5,7 +5,7 @@ the hardware. `agent/` contains the automation and working records used to produ
 those deliverables. The split applies to every module.
 
 ```text
-rsim/
+$pwd/
 ├── README.md
 ├── AGENTS.md
 ├── user/
