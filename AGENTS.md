@@ -1,4 +1,4 @@
-# RSIM project instructions
+# HARDWARE project instructions
 
 Read [the project rules](user/docs/project-rules.md) before creating or moving files.
 These rules apply to this entire workspace.
