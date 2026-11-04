@@ -10,9 +10,14 @@ independence or physical validity.
 
 ## Lifecycle and decisions
 
+Use the ordered [PLM lifecycle and sign-off contract](../../../../user/docs/plm-lifecycle.md).
+The table below summarizes evidence/readiness milestones across those stages;
+it does not replace their sequence or automatically advance a server state.
+
 | Milestone | Minimum evidence | Permitted claim |
 | --- | --- | --- |
-| Scope established | Requirement IDs; intended environment; interfaces; hazards; measurable acceptance; open decisions | Scope drafted, not feasibility proved |
+| Scope drafted | Project and module-root `SPECIFICATION.md`; proposed requirements, interfaces, acceptance methods and open decisions | Specification work and explicitly scoped feasibility studies |
+| Development authorized | Complete project and affected module specifications for the agreed scope; requirement allocation; resolved critical decisions; actual owner approval of both revisions | Module implementation within that approved scope; see [entry gates](module-specification.md) |
 | Design prepared | Native sources, revision, design calculations, trade-offs, part/material identities, assumptions | Design candidate |
 | Design reviewed | Applicable simulation/analytical reports; domain checks; independent review findings and disposition | Design review completed, with explicit blockers |
 | Prototype-ready | Current reviewed sources; DFM/DFA/DFT; BOM/materials; drawings/export checks; test/bring-up plan; applicable domain release gate | Engineering prototype package ready for user authorization |
@@ -25,7 +30,9 @@ The electronics-development gate names `prototype`, `bench`, and `qualified` rem
 
 Record these in the owning project's `docs/` or `evidence/` as appropriate. Use machine-readable metadata if an orchestrator will consume it.
 
-- Task and engineering baseline: project/subsystem, revision/commit or file hashes, author/date, gate requested.
+- Task and engineering baseline: project/subsystem, exact MiniPLM file revisions when applicable, local file hashes, author/date, gate requested. A Git commit may identify automation, but does not replace a saved design revision.
+- Specification: project and module-root `SPECIFICATION.md`, baseline revisions, approved scope and actual approval records; include the affected files in local gate inputs.
+- Lifecycle: current stage, applicable scope, exact revisions signed off, actual decision/approver/date, supporting review and permitted next stage/actions.
 - Requirements: stable IDs, units, limits, tolerances and acceptance criteria; unresolved values explicitly marked **proposed**.
 - Design: authoritative native files, interfaces, material/part variants, assumptions, failure modes and affected dependencies.
 - Verification: methods (inspection, calculation, simulation, review or measurement), exact configurations/solver versions/instrument calibration, conditions, raw artifacts and hashes.
@@ -34,6 +41,11 @@ Record these in the owning project's `docs/` or `evidence/` as appropriate. Use 
 - Next step: responsible party, remaining blockers, proposed action and whether user authorization is required.
 
 Label each claim as `proposed`, `analytical`, `simulated`, `synthetic`, `measured` or `confirmed` as applicable. Preserve source data and failures. Do not rename a proposed design target as a proven result.
+
+For MiniPLM packages, follow the [repository record contract](../../miniplm/references/repository-contract.md).
+Pin required members and dependencies individually; a product, iteration or
+folder is not a revision-pinned package. Keep save/verification outcomes separate
+from gate results. Retain local input/evidence files for the unchanged gate checkers.
 
 ## Review gates
 

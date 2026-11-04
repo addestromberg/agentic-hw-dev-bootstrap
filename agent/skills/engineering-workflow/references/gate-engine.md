@@ -1,5 +1,11 @@
 # Shared engineering gate engine
 
+The [PLM lifecycle](../../../../user/docs/plm-lifecycle.md) defines human stage
+reviews and sign-off. It does not change this checker's schema or CLI stage names
+(`design`, `prototype`, `bench`, `qualified`). Apply the checker appropriate to
+the readiness claim within a lifecycle review; do not pass PLM stage labels as
+new CLI values or replace the electrical domain's stricter release checks.
+
 Read-only, standard-library Python checker. This evaluates **evidence records**; it does not run SPICE/FEM, prove model correctness, certify a product or authorize fabrication. The existing electronics-development \`prototype\`/\`bench\`/\`qualified\` checker is called unchanged when the electrical domain is selected.
 
 \`\`\`sh

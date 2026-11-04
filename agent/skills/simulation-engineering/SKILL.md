@@ -7,6 +7,26 @@ description: Plan, run and evaluate reproducible engineering simulations and ana
 
 Use this skill when the task needs predictive analysis. Work with the applicable domain skill and the owning project's actual models; use $engineering-workflow for requirements and release handoffs.
 
+For module design-validation work, first apply the
+[specification gate](../engineering-workflow/references/module-specification.md)
+and identify the approved project/module `SPECIFICATION.md` revisions and requirement being
+evaluated. Before approval, an explicitly scoped feasibility study may help
+resolve a specification question; label its assumptions and results preliminary.
+Use the [PLM lifecycle](../../../user/docs/plm-lifecycle.md) for the consolidated
+Validation and analysis (simulation) review. Earlier calculations and simulations
+may inform approved concept/design work. Identify the baseline and limits in
+each report; simulation sign-off never establishes Manufacture, Build/assemble
+or Test (quality control) completion. Recheck affected cases after design changes.
+
+For MiniPLM-backed work, follow [the repository workflow](../miniplm/SKILL.md).
+Pin the geometry, netlist, solver models, material data and dataset revisions used
+for each run, together with local input hashes. Save reproducible simulation
+inputs, readable reports, report figures and selected useful result data in
+MiniPLM under `sim/<discipline>/<study>/{inputs,reports,results}/`. Keep raw run
+logs, evidence JSON, solver work files and scratch under local `agent/`; do not
+publish them. Reports describe failures/limits as well as successful results.
+Newer remote revisions do not retroactively update a completed run's baseline.
+
 ## Simulation protocol
 
 1. **Question:** specify requirement ID, measurable output, acceptance threshold, operating envelope, expected failure mode and what the model is capable of answering.

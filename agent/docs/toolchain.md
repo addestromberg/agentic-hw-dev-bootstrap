@@ -13,6 +13,24 @@ and `kicad-library` `10.0.7-1`.
 | `rsim_kicad` | [Seeed-Studio/kicad-mcp-server](https://github.com/Seeed-Studio/kicad-mcp-server) | Schematic/PCB tools, native `pcbnew`, `kicad-cli` checks/exports |
 | `rsim_blender` | [djeada/blender-mcp-server](https://github.com/djeada/blender-mcp-server) | Headless Python, jobs and rendering; pass `transport="headless"` |
 
+MiniPLM repository operations use the separate `miniplm` MCP tools when connected.
+Follow the [repository skill](../skills/miniplm/SKILL.md) for project/iteration
+selection, revision handling and file-transfer limits. That integration is not
+installed by `setup_mcp.py` or exercised by `verify_toolchain.py`. Its connection
+and credentials belong to the target environment; this bootstrap does not assign
+a MiniPLM account, product or iteration. Tool availability alone does not establish
+that authentication, binary retrieval or uploads work.
+When the integration/session or a usable target is unavailable, use the same
+local deliverable hierarchy and report local-only storage without PLM version
+control/history. Local engineering work does not require setting up MiniPLM.
+
+The [PLM lifecycle](../../user/docs/plm-lifecycle.md) is represented by readable
+project/module specification records and stage reviews. Available MiniPLM tools
+can inspect project stages and use existing upload containers, but do not expose
+a general stage-transition or approval operation. No lifecycle server automation
+has been installed or qualified by this bootstrap. Existing engineering checker
+stage names and schemas remain unchanged.
+
 The configured FreeCAD and Blender tools do not need an open GUI or GUI addon.
 Their upstream servers may log a missing optional GUI bridge at startup; headless
 tools run independently. GUI-only tools are excluded from the FreeCAD and Blender
@@ -48,8 +66,8 @@ the project-only entries during setup, so user-level registration is the verifie
 loading route here. These user-level entries therefore also appear in other
 projects and point back to this workspace.
 
-`.agents/skills` links to `agent/skills/`. It exposes five imported engineering
-skills plus `hardware-documentation`. Restart the session from this workspace to
+`.agents/skills` links to `agent/skills/`. It exposes five adapted engineering
+skills plus `hardware-documentation` and `miniplm`. Restart the session from this workspace to
 load the new servers and skills. See the official
 [MCP configuration](https://learn.chatgpt.com/docs/extend/mcp?surface=cli) and
 [local skill discovery](https://learn.chatgpt.com/docs/build-skills) documentation.
@@ -96,6 +114,11 @@ The five engineering skills were copied byte-for-byte from
 blob hashes. The import manifest is in `agent/evidence/setup/skywatch-import.json`.
 The project-local documentation skill was created for RSIM. All six skills passed
 the skill creator's structural validator.
+
+That manifest describes the original import, not the current skill contents.
+The engineering skills have since been adapted for the MiniPLM repository workflow
+and reusable project scope. `miniplm` is a project-local skill; downstream target
+mappings and design revisions are intentionally absent from the template.
 
 An initial Conda installation was discarded when the user selected pacman.
 Its local environment and downloaded package cache were removed. Small setup

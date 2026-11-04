@@ -7,7 +7,7 @@ Produce an inspectable review in the owning project's `docs/` or `evidence/`, li
 - Review ID / date:
 - Requested gate and declared scope:
 - Author / reviewer / independence: INDEPENDENT | SELF_REVIEW | UNKNOWN
-- Baseline: revision or hashes, source paths, requirements, interface versions
+- Baseline: exact MiniPLM file/dependency revisions when applicable, local hashes, source paths, requirements, interface versions
 - Artifacts inspected:
 - Checks actually rerun (commands, versions, results):
 - Evidence inspected (type, conditions, hashes and limitations):

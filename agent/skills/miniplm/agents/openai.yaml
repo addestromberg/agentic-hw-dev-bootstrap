@@ -1,0 +1,3 @@
+interface:
+  display_name: "MiniPLM repository"
+  short_description: "Save hardware files and trace exact MiniPLM revisions"

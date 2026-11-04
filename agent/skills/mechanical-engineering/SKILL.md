@@ -7,11 +7,43 @@ description: Design and review mechanical assemblies, native parametric CAD, mat
 
 Use $engineering-workflow for cross-discipline requirements and formal handoffs. Read the owning project's native CAD source, assembly context, operating conditions and [mechanical checks](references/design-checklist.md) before editing.
 
+Before module CAD development, follow the
+[specification gate](../engineering-workflow/references/module-specification.md)
+and read the approved project and module-root `SPECIFICATION.md` baselines. Resolve missing mechanical
+requirements/interfaces through specification work before implementation; scoped
+feasibility studies remain preliminary. Reapprove affected requirements changes.
+Apply the [PLM lifecycle](../../../user/docs/plm-lifecycle.md) at concept, design,
+detail and tooling reviews. Tool/fixture sources belong in `cad/tooling/` with
+matching STEP exports under `cad/exports/tooling/`. Carry manufacturing and
+inspection requirements into readable plans; do not advance physical stages
+based on CAD, a render or planned assembly instructions alone.
+
+For MiniPLM-backed work, follow [the repository workflow](../miniplm/SKILL.md).
+Resolve the master and separate native part revisions together; preserve their
+relative references in local `cad/` and `cad/components/` working copies. Save
+editable sources with their dependency record and derived exports. A converted
+preview or automatically imported folder is not a verified assembly baseline.
+Every saved `.FCStd` must have a matching `.step` from that source revision under
+`cad/exports/`, mirroring native subfolders such as `components/`. Recompute,
+export and check the STEP geometry/units; a missing or stale companion makes the
+package incomplete. Include editable Blender scenes in `cad/blender/<scene>/`
+with packed/portable dependencies and final images in `renders/<purpose>/`.
+Name top-level assemblies and subassemblies `<name>_assembly.<extension>`, with
+the suffix immediately before the extension. Matching exports retain the stem:
+`wheel_assembly.FCStd` pairs with `wheel_assembly.step`. Use the same suffix for
+Blender files representing assemblies, such as `wheel_assembly.blend`.
+Place non-embedded CAD imports and externally linked components in
+`cad/components/`, or the owning Blender scene's `components/` subfolder for linked
+Blender files. Include their transitive external dependencies and follow the same
+assembly naming, native/STEP and revision rules. Fully embedded components need
+no separate file, upload or per-component export; verify the saved parent is
+self-contained before omitting external sources. The parent's STEP remains required.
+
 ## Design workflow
 
 1. Define function, envelope, masses, loads, motion limits, stiffness and first natural frequency where relevant, alignment, temperature, moisture, materials, surfaces and manufacturing process. Use units and a consistent coordinate frame.
 2. Identify critical interfaces: mating faces, datum/fastener/shaft/optical axes, electronics mounts, cable bending and RF clearances. Specify tolerances and a plausible inspection method, not merely nominal dimensions.
-3. Prefer **native, editable parametric FreeCAD documents** for Skywatch designed parts: named parameters, constrained sketches and deterministic features. STEP/STL/mesh/renders are exchange/export artifacts, not the master model. Preserve user changes, broken references and feature history.
+3. Prefer **native, editable parametric FreeCAD documents** for designed parts: named parameters, constrained sketches and deterministic features. STEP/STL/mesh/renders are exchange/export artifacts, not the master model. Preserve user changes, broken references and feature history.
 4. Choose fit and fabrication strategy deliberately (FDM/resin printing, sheet metal, composites, casting or machining). Account for anisotropy, creep, shrinkage, support/access and achievable tolerances.
 5. Calculate likely failure modes: section stress, deflection, fastener preload, fatigue, vibration, thermal expansion, weather sealing, centre of mass and mechanical stops. Seek $simulation-engineering when the model is justified; validate critical dimensions and loads physically.
 6. Recompute/check the native model, geometry validity, interference and access, assembly travel, export units/orientation, drawing dimensions and fabrication constraints. Record limitations honestly.

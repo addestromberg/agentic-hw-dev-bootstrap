@@ -6,7 +6,7 @@ Use a project-local Markdown or structured record. These fields are mandatory wh
 | --- | --- |
 | Run ID and status | Unique run ID; PLANNED, RUN, FAILED or NOT_RUN |
 | Objective | Requirement ID, predicted observable, acceptance and decision supported |
-| Baseline | Source revision/commit or input hashes; model/source files and linked dataset identity |
+| Baseline | Exact MiniPLM source/dependency revisions when applicable and local input hashes; model/source files and linked dataset identity |
 | Execution | Solver and exact version, command/API invocation, environment, runtime settings, seed where relevant |
 | Model | Relevant geometry/netlist, units, coordinate frames, physics included/excluded and model limitations |
 | Cases | Stimuli, loads, boundary/initial conditions, parameter corners, tolerance or uncertainty ranges |

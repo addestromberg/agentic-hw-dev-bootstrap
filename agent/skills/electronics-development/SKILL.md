@@ -5,9 +5,20 @@ description: Develop or review electronic circuits, PCB layouts, component choic
 
 # Electronics development
 
-Use this workflow throughout electronics work, across projects. Continue useful draft work while recording unresolved requirements; do not make every edit wait for complete qualification.
+Use this workflow throughout electronics work, across projects. For module work
+in this bootstrap, the [specification gate](../engineering-workflow/references/module-specification.md)
+requires complete, approved project and module-root `SPECIFICATION.md` baselines before circuit/PCB or
+firmware/software implementation. Requirements discovery and explicitly scoped
+feasibility work can prepare that baseline. Qualification and release checks
+remain later gates; they do not replace specification approval.
+Align work with the [PLM lifecycle](../../../user/docs/plm-lifecycle.md), keeping
+concept/design/detail reviews and actual owner sign-off separate from checker
+results. Use the existing `prototype` gate for fabrication release planning,
+`bench` for the applicable assembled-board test entry, and `qualified` for claims
+requiring completed physical evidence. Lifecycle names do not change those enums
+or waive their mandatory checks.
 
-This skill is the electrical domain authority for Skywatch boards. For tasks
+This skill is the electrical domain authority for the owning project's boards. For tasks
 spanning disciplines, use [engineering-workflow](../engineering-workflow/SKILL.md)
 to coordinate requirements and handoffs; use [simulation-engineering](../simulation-engineering/SKILL.md)
 for reproducible simulation and [design-review](../design-review/SKILL.md)
@@ -15,6 +26,20 @@ for an independent review. **Do not replace** this skill's existing
 `prototype`, `bench` or `qualified` checker with the generic workflow gate.
 
 ## Before a change
+
+For MiniPLM-backed work, follow [the repository workflow](../miniplm/SKILL.md).
+Resolve the native KiCad project, schematic sheets, PCB and required local library
+revisions as one baseline. Keep relative library references intact locally and
+pin saved source revisions for BOM/fabrication exports. Remote IDs supplement
+local input hashes; they do not replace the release checker's file evidence.
+Group each board under `electronics/kicad/<board>/`, with the PCB, all schematic
+sheets, project files and portable library tables. Put required custom symbols,
+footprints and 3D models under its `libraries/`; preserve necessary shared-library
+references. Keep BOM/fabrication outputs grouped by board in their owning folders.
+Product firmware belongs in `firmware/<target>/` and software in `software/<app>/`,
+including source, build configuration, dependency manifests/locks and readable
+build/use instructions. Agent scripts, raw check logs, temporary JSON and local
+KiCad state stay local and are excluded from PLM.
 
 Read project instructions and existing evidence. Identify the board/revision, operating envelope, affected circuitry and failure modes. Distinguish requirements, proposals and measurements. If no release configuration exists, establish one in the owning project's config directory when relevant to the requested work; do not initialize unrelated projects.
 

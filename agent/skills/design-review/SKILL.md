@@ -7,6 +7,27 @@ description: Perform an evidence-based, ideally independent engineering design r
 
 Review the **design evidence**, not the author's confidence. Follow [review report contract](references/review-report.md) and $engineering-workflow. For board release, apply the existing $electronics-development release checker as well; a generic design review cannot replace it.
 
+Review project and module-root `SPECIFICATION.md` baselines against the
+[specification gate](../engineering-workflow/references/module-specification.md).
+Check completeness, measurable acceptance, interfaces, scope and actual approval
+before assessing development against that baseline. Specification review can
+prepare the owner's decision; it does not itself approve an unaccepted baseline.
+For a stage decision, use the [PLM lifecycle](../../../user/docs/plm-lifecycle.md)
+to check the required exit evidence, exact baseline, module/interface coverage
+and approved preceding scope. Return findings and a review recommendation; record
+owner sign-off separately. Product sign-off needs integration evidence as well as
+module results. Reopen affected decisions after a baseline change.
+
+For MiniPLM-backed work, follow [the repository workflow](../miniplm/SKILL.md).
+Identify the exact file revisions reviewed and their dependencies, then compare
+them with the claimed handoff. Folder membership, previews and “latest” are not
+review evidence. Bind findings and the review report to those revisions; later
+source changes require impact review before carrying the decision forward.
+Check the handoff against the [publish policy](../miniplm/references/publish-policy.md):
+folder grouping, FreeCAD/STEP pairs, Blender assets, board libraries, source/build
+files and readable reports as applicable. Publish a readable review summary;
+raw review/check logs and machine evidence remain local.
+
 ## Review steps
 
 1. Establish scope, requested gate, revision, interfaces and baseline requirements with explicit acceptance limits. Read applicable owner instructions, decisions, native sources, prior findings and evidence.
